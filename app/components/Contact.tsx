@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-yoga-dark">Location</h4>
-                  <p className="text-gray-600">123 Yoga Street, City, State - 110001</p>
+                  <p className="text-gray-600">Raipur, Chhattisgarh, India</p>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-yoga-dark">Email</h4>
-                  <p className="text-gray-600">info@pranashakti.com</p>
+                  <p className="text-gray-600">yogacharyakundan@gmail.com</p>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-yoga-dark">Phone</h4>
-                  <p className="text-gray-600">+91 98765 43210</p>
+                  <p className="text-gray-600">+91 79031 81568</p>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yoga-accent"
-                    placeholder="John Doe"
+                    placeholder="Rahul Verma"
                   />
                 </div>
                 
@@ -155,7 +155,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-yoga-accent"
-                    placeholder="johndoe@example.com"
+                    placeholder="rahul@example.com"
                   />
                 </div>
                 
