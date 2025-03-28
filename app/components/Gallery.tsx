@@ -125,12 +125,12 @@ const galleryImages = [
     alt: 'Yoga studio interior',
     category: 'poses',
   },      
-  {
-    id: 21,
-    src: '/images/poses/pose9.jpeg',
-    alt: 'Yoga studio interior',
-    category: 'poses',
-  },
+  // {
+  //   id: 21,
+  //   src: '/images/poses/pose9.jpeg',
+  //   alt: 'Yoga studio interior',
+  //   category: 'poses',
+  // },
 
 ];
 

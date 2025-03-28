@@ -55,7 +55,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <FiMapPin className="mr-2" />
-                <span>123 Yoga Street, City, State - 110001</span>
+                <span>Raipur, Chhattisgarh, India</span>
               </li>
               <li className="flex items-center">
                 <FiPhone className="mr-2" />
@@ -67,13 +67,13 @@ const Footer = () => {
               </li>
               {/* Social Icons */}
               <li className="flex items-center space-x-4 pt-2">
-                <Link href="https://www.instagram.com/yogacharya_kundan?igsh=dmxmMXQzNTExbmJn" className="hover:text-yoga-accent transition-colors">
+                <Link href="https://www.instagram.com/yogacharya_kundan?igsh=dmxmMXQzNTExbmJn" className="hover:text-yoga-accent transition-colors" target="_blank">
                   <FiInstagram size={20} />
                 </Link>
-                <Link href="https://www.facebook.com/share/19mCug9jkE/" className="hover:text-yoga-accent transition-colors">
+                <Link href="https://www.facebook.com/share/19mCug9jkE/" className="hover:text-yoga-accent transition-colors" target="_blank">
                   <FiFacebook size={20} />
                 </Link>
-                <Link href="https://www.youtube.com/@yogacharyakundan745" className="hover:text-yoga-accent transition-colors">
+                <Link href="https://www.youtube.com/@yogacharyakundan745" className="hover:text-yoga-accent transition-colors" target="_blank">
                   <FiYoutube size={20} />
                 </Link>
               </li>
