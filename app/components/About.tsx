@@ -35,7 +35,7 @@ const About = () => {
             className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl"
           >
             <Image 
-              src="/images/yogacharya-kundan.jpeg"
+              src="/images/instructor/kundan1.jpeg"
               alt="Yogacharya Kundan teaching"
               fill
               className="object-cover"
@@ -64,7 +64,7 @@ const About = () => {
             <div className="mt-8">
               <h4 className="text-xl font-serif font-semibold text-yoga-dark mb-3">Meet Your Guide: Yogacharya Kundan</h4>
               <p className="text-gray-700">
-                With over 15 years of experience in teaching yoga, Yogacharya Kundan brings a wealth of knowledge 
+                With over 9 years of experience in teaching yoga, Yogacharya Kundan brings a wealth of knowledge 
                 and authentic training to every class. Trained in traditional Hatha, Ashtanga, and Kundalini yoga, 
                 he combines ancient techniques with modern understanding to create a practice that is both 
                 accessible and transformative.
