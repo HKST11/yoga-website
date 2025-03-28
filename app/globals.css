@@ -60,4 +60,24 @@ body {
   .section {
     @apply py-16 md:py-24;
   }
+
+  /* Custom scrollbar for testimonials */
+  .testimonial-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #A97C50 #F5F1EA;
+  }
+  
+  .testimonial-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .testimonial-scroll::-webkit-scrollbar-track {
+    background: #F5F1EA;
+    border-radius: 10px;
+  }
+  
+  .testimonial-scroll::-webkit-scrollbar-thumb {
+    background-color: #A97C50;
+    border-radius: 10px;
+  }
 }

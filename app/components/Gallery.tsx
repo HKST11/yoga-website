@@ -7,40 +7,131 @@ import { FiX } from 'react-icons/fi';
 const galleryImages = [
   {
     id: 1,
-    src: '/images/Kundan_Prize.jpeg',
+    src: '/images/achievements/prize1.jpeg',
     alt: 'Yogacharya Kundan receiving prize',
-    category: 'achievement',
+    category: 'achievements',
   },
   {
     id: 2,
-    src: '/images/Schedule.jpeg',
+    src: '/images/achievements/prize2.jpeg',
     alt: 'Yoga class schedule',
-    category: 'classes',
+    category: 'achievements',
   },
   {
     id: 3,
-    src: '/images/Kundan_1_other.jpeg',
+    src: '/images/classes/class1.jpeg',
     alt: 'Yogacharya Kundan with one other person',
-    category: 'achievement',
+    category: 'classes',
   },
   {
     id: 4,
-    src: '/images/Yoga_Pose.jpeg',
+    src: '/images/classes/class2.jpeg',
     alt: 'Yoga pose demonstration',
     category: 'classes',
   },
   {
     id: 5,
-    src: '/images/yogacharya-kundan.jpeg',
+    src: '/images/classes/class3.jpeg',
     alt: 'Yogacharya Kundan teaching',
     category: 'classes',
   },
-  // {
-  //   id: 6,
-  //   src: 'https://images.unsplash.com/photo-1573590330099-d6c7355ec595?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-  //   alt: 'Yoga studio interior',
-  //   category: 'studio',
-  // },
+  {
+    id: 6,
+    src: '/images/classes/class4.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'classes',
+  },
+  {
+    id: 7,
+    src: '/images/classes/class5.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'classes',
+  },
+  {
+    id: 8,
+    src: '/images/classes/schedule.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'classes',
+  },
+  {
+    id: 9,
+    src: '/images/instructor/kundan1.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'studio',
+  },
+  {
+    id: 10,
+    src: '/images/instructor/kundan2.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'studio',
+  },
+  {
+    id: 11,
+    src: '/images/instructor/kundan3.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'studio',
+  },
+  {
+    id: 12,
+    src: '/images/instructor/kundan4.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'studio',
+  },
+  {
+    id: 13,
+    src: '/images/poses/pose1.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },
+  {
+    id: 14,
+    src: '/images/poses/pose2.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },  
+  {
+    id: 15,
+    src: '/images/poses/pose3.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },  
+  {
+    id: 16,
+    src: '/images/poses/pose4.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },  
+  {
+    id: 17,
+    src: '/images/poses/pose5.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },    
+  {
+    id: 18,
+    src: '/images/poses/pose6.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },    
+  {
+    id: 19,
+    src: '/images/poses/pose7.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },      
+  {
+    id: 20,
+    src: '/images/poses/pose8.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },      
+  {
+    id: 21,
+    src: '/images/poses/pose9.jpeg',
+    alt: 'Yoga studio interior',
+    category: 'poses',
+  },
+
 ];
 
 interface GalleryImage {
@@ -57,6 +148,8 @@ const Gallery = () => {
   const filters = [
     { value: 'all', label: 'All' },
     { value: 'classes', label: 'Classes' },
+    { value: 'achievements', label: 'Achievements' },
+    { value: 'poses', label: 'Yoga Poses' },
     // { value: 'meditation', label: 'Meditation' },
     // { value: 'studio', label: 'Studio' },
   ];
