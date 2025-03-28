@@ -7,40 +7,40 @@ import { FiX } from 'react-icons/fi';
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    alt: 'Yoga class in session',
-    category: 'classes',
+    src: '/images/Kundan_Prize.jpeg',
+    alt: 'Yogacharya Kundan receiving prize',
+    category: 'achievement',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80',
-    alt: 'Meditation session',
-    category: 'meditation',
+    src: '/images/Schedule.jpeg',
+    alt: 'Yoga class schedule',
+    category: 'classes',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    src: '/images/Kundan_1_other.jpeg',
+    alt: 'Yogacharya Kundan with one other person',
+    category: 'achievement',
+  },
+  {
+    id: 4,
+    src: '/images/Yoga_Pose.jpeg',
     alt: 'Yoga pose demonstration',
     category: 'classes',
   },
   {
-    id: 4,
-    src: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
-    alt: 'Group yoga session',
+    id: 5,
+    src: '/images/yogacharya-kundan.jpeg',
+    alt: 'Yogacharya Kundan teaching',
     category: 'classes',
   },
-  {
-    id: 5,
-    src: 'https://images.unsplash.com/photo-1528319725582-ddc096101511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    alt: 'Peaceful meditation',
-    category: 'meditation',
-  },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1573590330099-d6c7355ec595?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    alt: 'Yoga studio interior',
-    category: 'studio',
-  },
+  // {
+  //   id: 6,
+  //   src: 'https://images.unsplash.com/photo-1573590330099-d6c7355ec595?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+  //   alt: 'Yoga studio interior',
+  //   category: 'studio',
+  // },
 ];
 
 interface GalleryImage {
@@ -57,8 +57,8 @@ const Gallery = () => {
   const filters = [
     { value: 'all', label: 'All' },
     { value: 'classes', label: 'Classes' },
-    { value: 'meditation', label: 'Meditation' },
-    { value: 'studio', label: 'Studio' },
+    // { value: 'meditation', label: 'Meditation' },
+    // { value: 'studio', label: 'Studio' },
   ];
 
   const filteredImages = activeFilter === 'all'
