@@ -63,17 +63,17 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <FiMail className="mr-2" />
-                <span>info@pranashakti.com</span>
+                <span>yogacharyakundan@gmail.com</span>
               </li>
               {/* Social Icons */}
               <li className="flex items-center space-x-4 pt-2">
-                <Link href="#" className="hover:text-yoga-accent transition-colors">
+                <Link href="https://www.instagram.com/yogacharya_kundan?igsh=dmxmMXQzNTExbmJn" className="hover:text-yoga-accent transition-colors">
                   <FiInstagram size={20} />
                 </Link>
-                <Link href="#" className="hover:text-yoga-accent transition-colors">
+                <Link href="https://www.facebook.com/share/19mCug9jkE/" className="hover:text-yoga-accent transition-colors">
                   <FiFacebook size={20} />
                 </Link>
-                <Link href="#" className="hover:text-yoga-accent transition-colors">
+                <Link href="https://www.youtube.com/@yogacharyakundan745" className="hover:text-yoga-accent transition-colors">
                   <FiYoutube size={20} />
                 </Link>
               </li>
