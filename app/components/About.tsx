@@ -35,7 +35,7 @@ const About = () => {
             className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl"
           >
             <Image 
-              src="https://images.unsplash.com/photo-1608404862898-ca7de462b6b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
+              src="/images/yogacharya-kundan.jpeg"
               alt="Yogacharya Kundan teaching"
               fill
               className="object-cover"
