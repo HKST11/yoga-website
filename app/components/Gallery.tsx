@@ -47,12 +47,12 @@ const galleryImages = [
     alt: 'Yoga studio interior',
     category: 'classes',
   },
-  {
-    id: 8,
-    src: '/images/classes/schedule.jpeg',
-    alt: 'Yoga studio interior',
-    category: 'classes',
-  },
+  // {
+  //   id: 8,
+  //   src: '/images/classes/schedule.jpeg',
+  //   alt: 'Yoga studio interior',
+  //   category: 'classes',
+  // },
   {
     id: 9,
     src: '/images/instructor/kundan1.jpeg',
