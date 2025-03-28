@@ -1,0 +1,80 @@
+name: Auto-fill PR Details
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+# Add this permissions block to fix the 403 error
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  update-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Generate PR Details
+        id: generate-pr-details
+        run: |
+          # Get all commits in this PR
+          COMMITS=$(git log --format="%s" ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }})
+
+          # Extract first commit for title (if PR title is default branch name)
+          # if [[ "${{ github.event.pull_request.title }}" == "${{ github.head_ref }}" || "${{ github.event.pull_request.title }}" == "" ]]; then
+          FIRST_COMMIT=$(echo "$COMMITS" | head -n 1)
+          # Clean up the commit message for a title
+          PR_TITLE=$(echo "$FIRST_COMMIT" | sed -e 's/^feat: //g' -e 's/^fix: //g' -e 's/^docs: //g' -e 's/^style: //g' -e 's/^refactor: //g' -e 's/^test: //g' -e 's/^chore: //g')
+          echo "PR_TITLE=$PR_TITLE" >> $GITHUB_ENV
+          # fi
+
+          # Generate description from all commits
+          echo "### Changes in this PR" > pr_body.md
+          echo "" >> pr_body.md
+
+          # Group commits by type
+          echo "$COMMITS" | grep -E "^feat: " | sed 's/^feat: /- ✨ New feature: /g' >> pr_body.md
+          echo "$COMMITS" | grep -E "^fix: " | sed 's/^fix: /- 🐛 Bug fix: /g' >> pr_body.md
+          echo "$COMMITS" | grep -E "^docs: " | sed 's/^docs: /- 📚 Documentation: /g' >> pr_body.md
+          echo "$COMMITS" | grep -E "^style: " | sed 's/^style: /- 💎 Style: /g' >> pr_body.md
+          echo "$COMMITS" | grep -E "^refactor: " | sed 's/^refactor: /- ♻️ Refactor: /g' >> pr_body.md
+          echo "$COMMITS" | grep -E "^test: " | sed 's/^test: /- ✅ Test: /g' >> pr_body.md
+          echo "$COMMITS" | grep -E "^chore: " | sed 's/^chore: /- 🔧 Chore: /g' >> pr_body.md
+
+          # Get commits that don't follow conventional format
+          echo "$COMMITS" | grep -v -E "^(feat|fix|docs|style|refactor|test|chore): " | sed 's/^/- 🔄 Other: /g' >> pr_body.md
+
+          echo "" >> pr_body.md
+
+          # Add affected files section
+          echo "### Files changed" >> pr_body.md
+          echo "```" >> pr_body.md
+          git diff --stat ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} >> pr_body.md
+          echo "```" >> pr_body.md
+
+          cat pr_body.md > pr_body_final.md
+
+      - name: Update PR
+        # if: github.event.pull_request.title == github.head_ref || github.event.pull_request.title == ''
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const prBody = fs.readFileSync('pr_body_final.md', 'utf8');
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              title: process.env.PR_TITLE || context.payload.pull_request.title,
+              body: prBody
+            });
